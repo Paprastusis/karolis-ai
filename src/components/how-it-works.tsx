@@ -5,31 +5,28 @@ import { FadeInView } from "./animations/fade-in-view";
 const STEPS = [
   {
     number: "01",
-    title: "Discovery",
-    description:
-      "Understand your business, map workflows, design custom solution",
+    title: "Call",
+    description: "We talk through what's eating your time.",
   },
   {
     number: "02",
     title: "Build",
-    description:
-      "Full-stack development, integrations, testing, training",
+    description: "I design and build it, end to end.",
   },
   {
     number: "03",
-    title: "Deploy",
-    description:
-      "Launch, documentation, handoff, optional ongoing support",
+    title: "Launch",
+    description: "It goes live, with handoff and optional ongoing support.",
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section className="w-full bg-[#070612] py-24 lg:py-32">
+    <section className="w-full bg-surface py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <FadeInView>
           <h2 className="text-3xl font-medium text-white md:text-4xl lg:text-5xl">
-            How It <span className="font-serif italic">Works</span>
+            How it <span className="font-serif italic">works.</span>
           </h2>
         </FadeInView>
 
@@ -58,12 +55,6 @@ export function HowItWorks() {
             </FadeInView>
           ))}
         </div>
-
-        <FadeInView delay={0.3} className="mt-16">
-          <p className="text-center text-lg text-muted italic">
-            Every project starts with a conversation.
-          </p>
-        </FadeInView>
       </div>
     </section>
   );

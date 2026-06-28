@@ -6,43 +6,40 @@ import { FadeInView } from "./animations/fade-in-view";
 const CARDS = [
   {
     icon: LayoutGrid,
-    title: "Complete Business Management Platforms",
+    title: "Business management software",
     description:
-      "Full admin dashboards, multi-property management, inventory control, lease management, document generation. The entire operational backbone of your business.",
+      "The operational backbone: dashboards, customer management, leases, inventory, reporting.",
   },
   {
     icon: Users,
-    title: "Customer-Facing Systems",
+    title: "Customer-facing systems",
     description:
-      "Public booking pages, self-service portals, payment processing, automated agreements, real-time availability. Custom UX built for your brand.",
+      "Booking pages, self-service portals, payments, automated agreements.",
   },
   {
     icon: Link2,
-    title: "Financial Integration & Automation",
+    title: "Financial automation",
     description:
-      "QuickBooks sync, automated invoicing triggers, payment tracking, expense attachment, custom reporting. Built to work with your existing tools.",
+      "QuickBooks sync, automated invoicing, payment tracking, custom reports.",
   },
   {
     icon: Zap,
-    title: "AI Agents & Workflow Automation",
+    title: "AI agents and workflows",
     description:
-      "Custom AI agents that handle repetitive tasks: document parsing, data extraction, automated follow-ups, intelligent reminders. Build workflows that run on autopilot.",
+      "Document parsing, data extraction, automated follow-ups, anything repetitive.",
   },
 ];
 
 export function WhatIBuild() {
   return (
-    <section className="w-full bg-[#070612] py-24 lg:py-32">
+    <section className="w-full bg-surface py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        {/* Heading */}
         <FadeInView>
           <h2 className="text-3xl font-medium text-white md:text-4xl lg:text-5xl">
-            Custom Systems.{" "}
-            <span className="font-serif italic">Built From Scratch.</span>
+            What I can <span className="font-serif italic">build.</span>
           </h2>
         </FadeInView>
 
-        {/* Cards grid */}
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           {CARDS.map((card, i) => (
             <FadeInView key={card.title} delay={i * 0.1}>
@@ -61,16 +58,6 @@ export function WhatIBuild() {
             </FadeInView>
           ))}
         </div>
-
-        {/* Subheading */}
-        <FadeInView delay={0.2} className="mt-16">
-          <p className="text-center text-lg leading-relaxed text-body">
-            Every line of code written for your specific business needs.
-            <br />
-            Build a complete platform or individual modules—whatever your
-            business needs.
-          </p>
-        </FadeInView>
       </div>
     </section>
   );
