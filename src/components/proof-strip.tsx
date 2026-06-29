@@ -3,7 +3,7 @@
 import { FadeInView } from "./animations/fade-in-view";
 
 const PROOF = [
-  "6 products built and shipped",
+  "Built for my own businesses and for clients",
   "Software running a real operation since 2023",
   "Pipelines over millions of records",
   "Stripe, QuickBooks, and AI built in",

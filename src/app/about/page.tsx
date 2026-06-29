@@ -6,7 +6,7 @@ import { BlurIn } from "@/components/animations/blur-in";
 export const metadata: Metadata = {
   title: "About — Karolis Tamosiunas",
   description:
-    "I'm Karolis. I build software and AI systems for real businesses. Self-taught engineer and founder, based in Phoenix.",
+    "I'm Karolis. I build software and AI systems for real businesses. Founder and full-stack engineer, based in Phoenix.",
 };
 
 export default function AboutPage() {
@@ -34,10 +34,11 @@ export default function AboutPage() {
         <div className="mt-12 flex flex-col gap-6 text-lg leading-relaxed text-body">
           <BlurIn delay={0.1}>
             <p>
-              I&apos;m self-taught. It started when my own companies needed
-              software that didn&apos;t exist, so I built it. That turned into a
-              habit, and then a SaaS product, and a handful of other tools across
-              trucking, storage, and operations.
+              It started when my own companies needed software that
+              didn&apos;t exist, so I built it. That turned into a habit, then a
+              SaaS product, and custom systems for other businesses too. I work
+              across all kinds of operations, from storage and trucking to
+              inventory and the back office.
             </p>
           </BlurIn>
           <BlurIn delay={0.15}>
@@ -60,7 +61,7 @@ export default function AboutPage() {
         <BlurIn delay={0.25}>
           <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-6">
             <Link
-              href="/book-call"
+              href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-[#070612] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]"
             >
               Book a free call

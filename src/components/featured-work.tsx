@@ -46,7 +46,7 @@ export function FeaturedWork() {
             href="/work"
             className="inline-flex items-center gap-2 text-sm font-medium text-white/80 transition-colors duration-300 hover:text-accent"
           >
-            See all six projects
+            See all projects
             <ArrowRight className="h-4 w-4" />
           </Link>
         </FadeInView>

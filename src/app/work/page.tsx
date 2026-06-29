@@ -6,7 +6,7 @@ import { projects } from "@/content/projects";
 export const metadata: Metadata = {
   title: "Work — Karolis Tamosiunas",
   description:
-    "Six products I've built and shipped, from a multi-tenant SaaS to the software that runs a real storage business.",
+    "A selection of what I've built, from a multi-tenant SaaS to the software that runs a real storage business.",
 };
 
 const detailedProjects = projects.filter((p) => !p.light);
@@ -20,9 +20,11 @@ export default function WorkPage() {
           <h1 className="text-4xl font-medium text-white md:text-5xl">
             Selected <span className="font-serif italic">work.</span>
           </h1>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-body">
-            Six things I&apos;ve built and shipped. Real products running for
-            real businesses, across storage, trucking, and operations.
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-body">
+            A selection of what I&apos;ve built, from storage and trucking to
+            inventory and back-office operations, and really any business that
+            runs on manual work. Some client work isn&apos;t shown here for
+            privacy.
           </p>
         </FadeInView>
 

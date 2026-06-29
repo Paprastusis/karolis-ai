@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   title:
     "Karolis Tamosiunas — I build AI and automation systems that run real businesses.",
   description:
-    "Self-taught engineer and founder. I build full-stack software, custom AI agents, and the integrations that tie it all together, and I've shipped products that run real businesses.",
+    "Founder and full-stack engineer. I build custom software, AI agents, and automation for real businesses, including my own. Based in Phoenix, available remote.",
   openGraph: {
     title:
       "Karolis Tamosiunas — I build AI and automation systems that run real businesses.",

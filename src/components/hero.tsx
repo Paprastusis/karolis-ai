@@ -74,16 +74,17 @@ export function Hero() {
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
-                    href="/book-call"
+                    href="/contact"
                     className="inline-flex items-center rounded-full border-2 border-accent bg-transparent px-8 py-3 font-medium text-accent transition-all duration-300 hover:bg-[rgba(0,229,255,0.1)]"
                   >
                     Book a free call
                   </Link>
                 </div>
-                <p className="flex items-center gap-2 text-sm text-muted">
-                  <MapPin className="h-4 w-4 text-accent/60" />
-                  Self-taught engineer and founder. Based in Phoenix, available
-                  remote.
+                <p className="flex items-start gap-2 text-sm text-muted">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent/60" />
+                  Founder and full-stack engineer. I build custom software, AI
+                  agents, and automation for real businesses, including my own.
+                  Based in Phoenix, available remote.
                 </p>
               </div>
             </BlurIn>

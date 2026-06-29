@@ -34,8 +34,14 @@ export default function ServicesPage() {
             </p>
           </BlurIn>
           <BlurIn delay={0.3}>
+            <p className="mt-5 max-w-2xl border-l-2 border-accent/40 pl-4 text-base font-medium text-white/90">
+              One person who builds the whole thing. Faster and far cheaper than
+              a software firm, with none of the handoffs or overhead.
+            </p>
+          </BlurIn>
+          <BlurIn delay={0.45}>
             <Link
-              href="/book-call"
+              href="/contact"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-[#070612] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]"
             >
               Book a free call
@@ -77,7 +83,7 @@ export default function ServicesPage() {
         <div className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center lg:px-12">
           <BlurIn>
             <Link
-              href="/book-call"
+              href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-[#070612] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]"
             >
               Book a free call

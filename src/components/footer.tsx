@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 function LinkedInIcon({ className }: { className?: string }) {
   return (
@@ -32,13 +32,20 @@ export function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 sm:flex-row lg:px-12">
         <p className="text-sm text-muted">&copy; 2026 Karolis Tamosiunas</p>
 
-        <div className="flex items-center gap-5">
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3">
           <a
             href="mailto:karolistamas@gmail.com"
             className="flex items-center gap-2 text-sm text-muted transition-colors duration-300 hover:text-accent"
           >
             <Mail className="h-4 w-4" />
             karolistamas@gmail.com
+          </a>
+          <a
+            href="tel:+16027673078"
+            className="flex items-center gap-2 text-sm text-muted transition-colors duration-300 hover:text-accent"
+          >
+            <Phone className="h-4 w-4" />
+            602-767-3078
           </a>
           <a
             href="https://www.linkedin.com/in/karolis-tamosiunas-6b25002b6"
