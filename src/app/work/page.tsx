@@ -4,7 +4,7 @@ import { ProjectCard, ProjectCardLight } from "@/components/project-card";
 import { projects } from "@/content/projects";
 
 export const metadata: Metadata = {
-  title: "Work — Karolis Tamosiunas",
+  title: "Work",
   description:
     "A selection of what I've built, from a multi-tenant SaaS to the software that runs a real storage business.",
 };

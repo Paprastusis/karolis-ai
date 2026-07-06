@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { FadeInView } from "./animations/fade-in-view";
@@ -23,8 +24,19 @@ export function FeaturedWork() {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(0,229,255,0.3)] hover:bg-white/[0.05] hover:shadow-[0_0_20px_rgba(0,229,255,0.1)]"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(0,229,255,0.3)] hover:bg-white/[0.05] hover:shadow-[0_0_20px_rgba(0,229,255,0.1)]"
               >
+                {project.image && (
+                  <div className="-mx-7 -mt-7 mb-6 aspect-[16/10] overflow-hidden border-b border-white/10">
+                    <Image
+                      src={project.image}
+                      alt=""
+                      width={1400}
+                      height={875}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                )}
                 <StatusBadge status={project.status} />
                 <h3 className="mt-5 text-xl font-medium text-white">
                   {project.name}

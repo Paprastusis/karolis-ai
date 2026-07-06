@@ -6,7 +6,7 @@ import { WhatIBuild } from "@/components/what-i-build";
 import { HowItWorks } from "@/components/how-it-works";
 
 export const metadata: Metadata = {
-  title: "Services — Karolis Tamosiunas",
+  title: "Services",
   description:
     "Custom automation and AI for your business. Booking, invoicing, document handling, reporting, customer portals, and AI agents that handle the busywork.",
 };

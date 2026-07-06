@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { MotionProvider } from "@/components/motion-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,13 +25,16 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://karolis.ai"),
-  title:
-    "Karolis Tamosiunas — I build AI and automation systems that run real businesses.",
+  title: {
+    default:
+      "Karolis Tamosiunas — AI and automation systems for real businesses",
+    template: "%s — Karolis Tamosiunas",
+  },
   description:
     "Founder and full-stack engineer. I build custom software, AI agents, and automation for real businesses, including my own. Based in Phoenix, available remote.",
   openGraph: {
     title:
-      "Karolis Tamosiunas — I build AI and automation systems that run real businesses.",
+      "Karolis Tamosiunas — AI and automation systems for real businesses",
     description:
       "Full-stack software, custom AI agents, and the integrations that tie it all together. Products that run real businesses.",
     url: "https://karolis.ai",
@@ -39,10 +44,24 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Karolis Tamosiunas — I build AI and automation systems that run real businesses.",
+      "Karolis Tamosiunas — AI and automation systems for real businesses",
     description:
       "Full-stack software, custom AI agents, and the integrations that tie it all together. Products that run real businesses.",
   },
+};
+
+// Structured data so search engines connect the domain to the person.
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Karolis Tamosiunas",
+  url: "https://karolis.ai",
+  jobTitle: "Founder and Full-Stack Engineer",
+  email: "mailto:karolistamas@gmail.com",
+  sameAs: [
+    "https://www.linkedin.com/in/karolis-tamosiunas-6b25002b6",
+    "https://github.com/Paprastusis",
+  ],
 };
 
 export default function RootLayout({
@@ -56,9 +75,16 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <MotionProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </MotionProvider>
+        <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </body>
     </html>
   );

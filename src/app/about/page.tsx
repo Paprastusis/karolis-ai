@@ -4,7 +4,7 @@ import { ArrowRight, Mail } from "lucide-react";
 import { BlurIn } from "@/components/animations/blur-in";
 
 export const metadata: Metadata = {
-  title: "About — Karolis Tamosiunas",
+  title: "About",
   description:
     "I'm Karolis. I build software and AI systems for real businesses. Founder and full-stack engineer, based in Phoenix.",
 };

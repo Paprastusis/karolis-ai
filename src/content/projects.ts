@@ -12,6 +12,8 @@ export type Project = {
   /** e.g. "Live", "In production since 2023", "MVP", "In pilot". */
   status: string;
   liveUrl?: string;
+  /** Screenshot path under /public. Cards without one render text-only. */
+  image?: string;
   problem?: string;
   whatIBuilt: string;
   stack?: string[];
@@ -29,6 +31,7 @@ export const projects: Project[] = [
     homeTagline: "Multi-tenant SaaS for storage operators.",
     status: "Live",
     liveUrl: "https://fluxsync.io",
+    image: "/projects/flux-sync.jpg",
     problem:
       "Storage and parking yards run on spreadsheets and paper. I'd already built software for my own yards, so I turned it into a product other operators could use. The approach is “sync, don't replace” — it connects to the tools they already use like Stripe and QuickBooks instead of forcing a switch.",
     whatIBuilt:
@@ -53,6 +56,7 @@ export const projects: Project[] = [
     homeTagline: "The software that runs a 3-location storage business.",
     status: "In production since 2023",
     liveUrl: "https://paddockparking.com",
+    image: "/projects/paddock-pms.jpg",
     problem:
       "Running multiple storage locations by hand means endless paperwork, manual invoicing, and lost bookings. I built the entire software backbone so the business runs itself.",
     whatIBuilt:
@@ -75,6 +79,7 @@ export const projects: Project[] = [
     homeTagline: "Carrier ratings for truck drivers, built on millions of safety records.",
     status: "MVP",
     liveUrl: "https://carrier-grade.vercel.app",
+    image: "/projects/carrier-grade.png",
     problem:
       "Carriers screen every driver through paid databases, but drivers pick who to work for based on a recruiter's word. CarrierGrade flips it: search any carrier and get an A to F grade built from safety data, live market signals, and verified reviews.",
     whatIBuilt:

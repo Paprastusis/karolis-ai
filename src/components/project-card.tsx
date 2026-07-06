@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/content/projects";
 import { SystemDiagram } from "./system-diagram";
@@ -37,6 +38,19 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
         <StatusBadge status={project.status} />
       </div>
+
+      {/* Paddock's visual is the system diagram below; others get a screenshot. */}
+      {project.image && project.slug !== "paddock-pms" && (
+        <div className="mt-7 overflow-hidden rounded-xl border border-white/10 bg-white/[0.02]">
+          <Image
+            src={project.image}
+            alt={`${project.name} screenshot`}
+            width={1400}
+            height={875}
+            className="w-full"
+          />
+        </div>
+      )}
 
       {project.problem && (
         <div className="mt-7">

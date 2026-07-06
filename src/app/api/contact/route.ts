@@ -19,6 +19,14 @@ const recentByIp = new Map<string, number[]>();
 
 function isRateLimited(ip: string): boolean {
   const now = Date.now();
+  // Evict IPs whose entries have all expired so the map can't grow unbounded.
+  if (recentByIp.size > 500) {
+    for (const [key, times] of recentByIp) {
+      if (times.every((t) => now - t >= RATE_LIMIT_WINDOW_MS)) {
+        recentByIp.delete(key);
+      }
+    }
+  }
   const recent = (recentByIp.get(ip) ?? []).filter(
     (t) => now - t < RATE_LIMIT_WINDOW_MS
   );
