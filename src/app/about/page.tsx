@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 import { BlurIn } from "@/components/animations/blur-in";
@@ -15,11 +16,14 @@ export default function AboutPage() {
       <div className="mx-auto max-w-3xl px-6 lg:px-12">
         {/* Headshot + intro */}
         <div className="flex flex-col items-start gap-8 sm:flex-row sm:items-center">
-          {/* TODO: replace this placeholder with a real headshot,
-              e.g. <Image src="/karolis.jpg" alt="Karolis Tamosiunas" width={112} height={112} className="rounded-full object-cover" /> */}
-          <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] font-serif text-2xl italic text-accent/80">
-            KT
-          </div>
+          <Image
+            src="/karolis.jpg"
+            alt="Karolis Tamosiunas"
+            width={112}
+            height={112}
+            priority
+            className="h-28 w-28 shrink-0 rounded-full border border-white/10 object-cover"
+          />
           <BlurIn>
             <h1 className="text-3xl font-medium leading-tight text-white md:text-4xl">
               I&apos;m Karolis. I build software and AI systems for{" "}

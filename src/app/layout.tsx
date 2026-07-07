@@ -56,6 +56,7 @@ const personJsonLd = {
   "@type": "Person",
   name: "Karolis Tamosiunas",
   url: "https://karolis.ai",
+  image: "https://karolis.ai/karolis.jpg",
   jobTitle: "Founder and Full-Stack Engineer",
   email: "mailto:karolistamas@gmail.com",
   sameAs: [
