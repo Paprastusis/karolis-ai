@@ -59,7 +59,7 @@ const personJsonLd = {
   jobTitle: "Founder and Full-Stack Engineer",
   email: "mailto:karolistamas@gmail.com",
   sameAs: [
-    "https://www.linkedin.com/in/karolis-tamosiunas-6b25002b6",
+    "https://www.linkedin.com/in/karolis-tamosiunas/",
     "https://github.com/Paprastusis",
   ],
 };

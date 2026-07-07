@@ -48,7 +48,7 @@ export function Footer() {
             602-767-3078
           </a>
           <a
-            href="https://www.linkedin.com/in/karolis-tamosiunas-6b25002b6"
+            href="https://www.linkedin.com/in/karolis-tamosiunas/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
