@@ -68,7 +68,7 @@ export default function AboutPage() {
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-[#070612] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]"
             >
-              Book a free call
+              Let&apos;s talk
               <ArrowRight className="h-4 w-4" />
             </Link>
             <a

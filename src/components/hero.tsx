@@ -77,7 +77,7 @@ export function Hero() {
                     href="/contact"
                     className="inline-flex items-center rounded-full border-2 border-accent bg-transparent px-8 py-3 font-medium text-accent transition-all duration-300 hover:bg-[rgba(0,229,255,0.1)]"
                   >
-                    Book a free call
+                    Let&apos;s talk
                   </Link>
                 </div>
                 <p className="flex items-start gap-2 text-sm text-muted">

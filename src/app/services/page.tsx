@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { BlurIn } from "@/components/animations/blur-in";
 import { WhatIBuild } from "@/components/what-i-build";
 import { HowItWorks } from "@/components/how-it-works";
+import { CostCalculator } from "@/components/cost-calculator";
+import { BlueprintOffer } from "@/components/blueprint-offer";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -44,7 +46,7 @@ export default function ServicesPage() {
               href="/contact"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-[#070612] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]"
             >
-              Book a free call
+              Let&apos;s talk
               <ArrowRight className="h-4 w-4" />
             </Link>
           </BlurIn>
@@ -75,6 +77,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* What manual work costs */}
+      <CostCalculator />
+
+      {/* The entry offer */}
+      <BlueprintOffer />
+
       {/* How it works */}
       <HowItWorks />
 
@@ -86,7 +94,7 @@ export default function ServicesPage() {
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-[#070612] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]"
             >
-              Book a free call
+              Let&apos;s talk
               <ArrowRight className="h-4 w-4" />
             </Link>
           </BlurIn>
