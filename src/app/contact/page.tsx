@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Mail, Phone } from "lucide-react";
 import { BlurIn } from "@/components/animations/blur-in";
 import { ContactModes } from "@/components/contact-modes";
@@ -35,7 +36,9 @@ export default function ContactPage() {
 
         <BlurIn delay={0.15}>
           <div className="mt-12">
-            <ContactModes agentEnabled={agentEnabled} />
+            <Suspense fallback={null}>
+              <ContactModes agentEnabled={agentEnabled} />
+            </Suspense>
           </div>
         </BlurIn>
 

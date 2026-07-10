@@ -39,7 +39,7 @@ const inputClasses =
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-export function IntakeWizard() {
+export function IntakeWizard({ intent }: { intent?: "blueprint" }) {
   const [step, setStep] = useState(1);
   const [pains, setPains] = useState<string[]>([]);
   const [tools, setTools] = useState<string[]>([]);
@@ -74,6 +74,7 @@ export function IntakeWizard() {
     const note = fields.note.trim();
 
     const lines = [
+      intent === "blueprint" ? "Interested in: The Automation Blueprint" : null,
       pains.length ? `What's eating time: ${pains.join(", ")}` : null,
       tools.length ? `Running on: ${tools.join(", ")}` : null,
       size ? `Team size: ${size}` : null,
@@ -92,6 +93,7 @@ export function IntakeWizard() {
           phone: fields.phone,
           message: lines.length ? lines.join("\n") : "(sent from the contact page)",
           source: "wizard",
+          intent: intent ?? "",
           company_website: String(data.get("company_website") ?? ""),
         }),
       });
@@ -138,6 +140,13 @@ export function IntakeWizard() {
 
   return (
     <div>
+      {intent === "blueprint" && (
+        <div className="mb-5 flex justify-center">
+          <span className="rounded-full border border-accent/30 bg-accent/[0.06] px-3 py-1 text-xs font-medium text-accent">
+            Asking about: The Automation Blueprint
+          </span>
+        </div>
+      )}
       {/* Progress dots */}
       <div className="mb-6 flex items-center justify-between">
         <div className="flex gap-1.5" aria-hidden="true">

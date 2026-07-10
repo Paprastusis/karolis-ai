@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { MessageSquare, Sparkles } from "lucide-react";
 import { IntakeWizard } from "./intake-wizard";
 import { AgentChat } from "./agent-chat";
@@ -9,9 +10,14 @@ import { AgentChat } from "./agent-chat";
 // page never shows a chat that can't answer.
 export function ContactModes({ agentEnabled }: { agentEnabled: boolean }) {
   const [mode, setMode] = useState<"wizard" | "agent">("wizard");
+  // "Get the Blueprint" CTAs link to /contact?intent=blueprint so those leads
+  // arrive tagged. Requires a <Suspense> boundary around this component.
+  const searchParams = useSearchParams();
+  const intent =
+    searchParams.get("intent") === "blueprint" ? "blueprint" : undefined;
 
   if (!agentEnabled) {
-    return <IntakeWizard />;
+    return <IntakeWizard intent={intent} />;
   }
 
   return (
@@ -34,7 +40,7 @@ export function ContactModes({ agentEnabled }: { agentEnabled: boolean }) {
           label="Ask my agent"
         />
       </div>
-      {mode === "wizard" ? <IntakeWizard /> : <AgentChat />}
+      {mode === "wizard" ? <IntakeWizard intent={intent} /> : <AgentChat />}
     </div>
   );
 }

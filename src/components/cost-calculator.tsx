@@ -6,7 +6,7 @@ import { FadeInView } from "./animations/fade-in-view";
 
 export function CostCalculator() {
   const [tasks, setTasks] = useState(40);
-  const [minutes, setMinutes] = useState(6);
+  const [minutes, setMinutes] = useState(15);
   const [rate, setRate] = useState(28);
 
   const hoursPerWeek = (tasks * minutes) / 60;
@@ -78,7 +78,7 @@ export function CostCalculator() {
               few months. The exact number comes from the Blueprint.
             </p>
             <Link
-              href="/contact"
+              href="/contact?intent=blueprint"
               className="inline-flex shrink-0 items-center rounded-full border-2 border-accent bg-transparent px-6 py-2.5 text-sm font-medium text-accent transition-all duration-300 hover:bg-[rgba(0,229,255,0.1)]"
             >
               Get the exact number

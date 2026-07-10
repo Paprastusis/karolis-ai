@@ -74,6 +74,7 @@ export async function POST(request: NextRequest) {
   const message = String(body.message ?? "").trim();
   const honeypot = String(body.company_website ?? "").trim();
   const source = String(body.source ?? "");
+  const intent = String(body.intent ?? "");
 
   // Honeypot tripped: looks like a bot. Pretend success and silently drop it.
   if (honeypot) {
@@ -102,13 +103,11 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const sourceTag =
-    source === "wizard"
-      ? " (guided intake)"
-      : source === "agent"
-        ? " (agent chat)"
-        : "";
-  const subject = `New message from ${name} via karolis.ai${sourceTag}`;
+  const tags = [
+    source === "wizard" ? "guided intake" : source === "agent" ? "agent chat" : null,
+    intent === "blueprint" ? "Blueprint" : null,
+  ].filter(Boolean);
+  const subject = `New message from ${name} via karolis.ai${tags.length ? ` (${tags.join(", ")})` : ""}`;
   const textBody = [
     `Name: ${name}`,
     `Email: ${email}`,
