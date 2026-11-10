@@ -12,7 +12,7 @@ const VIDEO_SRC =
 
 export function Hero() {
   return (
-    <section className="relative min-h-[calc(100vh-4rem)] w-full overflow-hidden bg-[#070612]">
+    <section className="relative w-full overflow-hidden bg-[#070612]">
       {/* Background Video */}
       <HlsVideo
         src={VIDEO_SRC}
@@ -23,7 +23,9 @@ export function Hero() {
       <div className="absolute bottom-0 left-0 right-0 z-10 h-40 bg-gradient-to-t from-[#070612] to-transparent" />
 
       {/* Content */}
-      <div className="relative z-20 flex min-h-[calc(100vh-4rem)] items-center py-12">
+      {/* Tall enough to feel like a hero, capped so big screens don't get a
+          band of empty space under the buttons. */}
+      <div className="relative z-20 flex min-h-[min(calc(100vh-4rem),40rem)] items-center py-16 lg:py-24">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-12">
           <div className="flex flex-col gap-12">
             {/* Heading + Subtitle group */}
