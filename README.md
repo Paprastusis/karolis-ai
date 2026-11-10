@@ -10,4 +10,16 @@ npm run build   # production build
 npm run lint    # eslint
 ```
 
-Project content lives in `src/content/projects.ts` (single source of truth for the Work section). Booking goes through `/book-call`; paste the Google Calendar embed URL into `GOOGLE_BOOKING_URL` in `src/app/book-call/page.tsx` to go live.
+Project content lives in `src/content/projects.ts` (single source of truth for the Work section). FAQ content lives in `src/content/faq.ts`.
+
+### Environment variables (set in Vercel)
+
+| Variable | What it does |
+|---|---|
+| `RESEND_API_KEY` | Delivers contact-form and agent leads by email. |
+| `ANTHROPIC_API_KEY` | Turns on the intake agent. |
+| `NEXT_PUBLIC_BOOKING_URL` | Public booking page (Google Calendar, Cal.com, Calendly). Switches the main buttons from "Let's talk" to "Book a free call". |
+| `NEXT_PUBLIC_META_PIXEL_ID` | Numeric Meta Pixel ID. Loads the Pixel and reports page views, `Lead`, and `Schedule` events. |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Token from Google Search Console's "HTML tag" verification method. |
+
+The canonical domain is `https://www.karolis.ai` (see `src/lib/site.ts`); the apex redirects to it in Vercel.

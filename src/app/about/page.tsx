@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { BlurIn } from "@/components/animations/blur-in";
+import { BookCallLink } from "@/components/book-call-link";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "I'm Karolis. I build software and AI systems for real businesses. Founder and full-stack engineer, based in Phoenix.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
@@ -55,8 +56,8 @@ export default function AboutPage() {
           </BlurIn>
           <BlurIn delay={0.2}>
             <p>
-              These days I&apos;m building, and I&apos;m open to the right role
-              or project. If you want to work together, let&apos;s talk.
+              These days I build systems like these for other businesses. If
+              something in yours still runs on manual work, let&apos;s talk.
             </p>
           </BlurIn>
         </div>
@@ -64,13 +65,7 @@ export default function AboutPage() {
         {/* Contact CTA */}
         <BlurIn delay={0.25}>
           <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-6">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-[#070612] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]"
-            >
-              Let&apos;s talk
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            <BookCallLink placement="about" />
             <a
               href="mailto:karolistamas@gmail.com"
               className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors duration-300 hover:text-accent"

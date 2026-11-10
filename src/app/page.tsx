@@ -1,10 +1,16 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import { ProofStrip } from "@/components/proof-strip";
 import { FeaturedWork } from "@/components/featured-work";
 import { AgentShowcase } from "@/components/agent-showcase";
 import { ServicesTeaser } from "@/components/services-teaser";
+import { BlueprintOffer } from "@/components/blueprint-offer";
 import { AboutTeaser } from "@/components/about-teaser";
 import { ContactCTA } from "@/components/contact-cta";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   // Same gate as /contact: the demo section exists only when the key does.
@@ -17,6 +23,7 @@ export default function Home() {
       <FeaturedWork />
       {agentEnabled && <AgentShowcase />}
       <ServicesTeaser />
+      <BlueprintOffer />
       <AboutTeaser />
       <ContactCTA />
     </>

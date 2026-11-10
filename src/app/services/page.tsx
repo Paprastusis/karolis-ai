@@ -6,11 +6,14 @@ import { WhatIBuild } from "@/components/what-i-build";
 import { HowItWorks } from "@/components/how-it-works";
 import { CostCalculator } from "@/components/cost-calculator";
 import { BlueprintOffer } from "@/components/blueprint-offer";
+import { BookCallLink } from "@/components/book-call-link";
+import { Faq } from "@/components/faq";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
     "Custom automation and AI for your business. Booking, invoicing, document handling, reporting, customer portals, and AI agents that handle the busywork.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {
@@ -42,13 +45,7 @@ export default function ServicesPage() {
             </p>
           </BlurIn>
           <BlurIn delay={0.45}>
-            <Link
-              href="/contact"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-[#070612] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]"
-            >
-              Let&apos;s talk
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            <BookCallLink placement="services_hero" className="mt-8" />
           </BlurIn>
         </div>
       </section>
@@ -86,17 +83,14 @@ export default function ServicesPage() {
       {/* How it works */}
       <HowItWorks />
 
+      {/* Common questions (also published as FAQ structured data) */}
+      <Faq />
+
       {/* Final CTA */}
       <section className="w-full bg-[#070612] py-24 lg:py-28">
         <div className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center lg:px-12">
           <BlurIn>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-[#070612] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]"
-            >
-              Let&apos;s talk
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            <BookCallLink placement="services_closing" />
           </BlurIn>
           <BlurIn delay={0.1}>
             <p className="mt-5 text-sm text-muted">

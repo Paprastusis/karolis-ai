@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { Mail, Phone } from "lucide-react";
+import { CalendarClock, Mail, Phone } from "lucide-react";
 import { BlurIn } from "@/components/animations/blur-in";
 import { ContactModes } from "@/components/contact-modes";
+import { BookCallLink } from "@/components/book-call-link";
+import { BOOKING_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Whether you're hiring or want something built, answer a few quick questions, or just email, call, or text me. No pitch, just a conversation.",
+    "Want something built or automated? Answer a few quick questions, or just email, call, or text me. No pitch, just a conversation.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
@@ -28,11 +31,32 @@ export default function ContactPage() {
           <BlurIn delay={0.1}>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-body">
               {agentEnabled
-                ? "Whether you're hiring or want something built, answer a few quick questions, ask my agent, or just email, call, or text me. No pitch, just a conversation."
-                : "Whether you're hiring or want something built, answer a few quick questions, or just email, call, or text me. No pitch, just a conversation."}
+                ? "Tell me what's eating your team's time. Answer a few quick questions, ask my agent, or just email, call, or text me. No pitch, just a conversation."
+                : "Tell me what's eating your team's time. Answer a few quick questions, or just email, call, or text me. No pitch, just a conversation."}
             </p>
           </BlurIn>
         </div>
+
+        {/* Fastest route: pick a time. Shown only once a booking URL is set. */}
+        {BOOKING_URL && (
+          <BlurIn delay={0.12}>
+            <div className="mt-10 flex flex-col items-center gap-4 rounded-2xl border border-accent/25 bg-accent/[0.05] p-6 text-center sm:flex-row sm:justify-between sm:text-left">
+              <p className="flex items-start gap-3 text-sm leading-relaxed text-body">
+                <CalendarClock
+                  className="mt-0.5 hidden h-5 w-5 shrink-0 text-accent sm:block"
+                  aria-hidden="true"
+                />
+                <span>
+                  <span className="block font-medium text-white">
+                    Fastest: pick a time.
+                  </span>
+                  A free 20-minute call about what you&apos;d like automated.
+                </span>
+              </p>
+              <BookCallLink placement="contact" className="shrink-0" />
+            </div>
+          </BlurIn>
+        )}
 
         <BlurIn delay={0.15}>
           <div className="mt-12">

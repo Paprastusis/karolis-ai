@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Work",
   description:
     "A selection of what I've built, from a multi-tenant SaaS to the software that runs a real storage business.",
+  alternates: { canonical: "/work" },
 };
 
 const detailedProjects = projects.filter((p) => !p.light);

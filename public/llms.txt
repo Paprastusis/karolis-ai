@@ -1,0 +1,22 @@
+# Karolis Tamosiunas
+
+> Founder and full-stack engineer in Phoenix, Arizona. Builds custom software, AI agents, and automation for businesses that run on manual work, including his own storage business. Works with clients remotely.
+
+## What he builds
+
+- Business management software: dashboards, customer management, leases, inventory, reporting
+- Customer-facing systems: online booking, self-service portals, payments, automated agreements
+- Financial automation: QuickBooks sync, automated invoicing, payment tracking, custom reports
+- AI agents and workflows: document parsing, data extraction, automated follow-ups
+
+## How to start
+
+- The Automation Blueprint: $999, fixed scope, delivered in one week. A map of how work flows through the business, automation opportunities ranked with ROI math, a build-or-buy recommendation for each, and a fixed quote for anything worth building. The $999 is credited toward the build.
+
+## Pages
+
+- [Home](https://www.karolis.ai/): overview and a live intake agent
+- [Work](https://www.karolis.ai/work): shipped projects, including Flux Sync (SaaS for storage-yard operators) and the software that runs Paddock Parking
+- [Services](https://www.karolis.ai/services): what he builds, the Blueprint offer, and common questions
+- [About](https://www.karolis.ai/about): background
+- [Contact](https://www.karolis.ai/contact): intake form, email, and phone

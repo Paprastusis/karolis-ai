@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Send, Sparkles } from "lucide-react";
+import { trackEvent } from "@/lib/track";
 
 const GREETING =
   "Hey. Tell me about your business and what still runs on manual work.";
@@ -80,6 +81,7 @@ export function AgentChat() {
       });
       if (!res.ok) throw new Error();
       setSendState("sent");
+      trackEvent("lead", { source: "agent" });
     } catch {
       setSendState("failed");
     }

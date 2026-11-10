@@ -1,17 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { BlurIn } from "./animations/blur-in";
 import { SplitText } from "./animations/split-text";
 import { HlsVideo } from "./hls-video";
+import { BookCallLink } from "./book-call-link";
 
 const VIDEO_SRC =
   "https://stream.mux.com/s8pMcOvMQXc4GD6AX4e1o01xFogFxipmuKltNfSYza0200.m3u8";
 
 export function Hero() {
   return (
-    <section className="relative h-[calc(100vh-4rem)] w-full overflow-hidden bg-[#070612]">
+    <section className="relative min-h-[calc(100vh-4rem)] w-full overflow-hidden bg-[#070612]">
       {/* Background Video */}
       <HlsVideo
         src={VIDEO_SRC}
@@ -22,7 +23,7 @@ export function Hero() {
       <div className="absolute bottom-0 left-0 right-0 z-10 h-40 bg-gradient-to-t from-[#070612] to-transparent" />
 
       {/* Content */}
-      <div className="relative z-20 flex h-full items-center">
+      <div className="relative z-20 flex min-h-[calc(100vh-4rem)] items-center py-12">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-12">
           <div className="flex flex-col gap-12">
             {/* Heading + Subtitle group */}
@@ -66,18 +67,12 @@ export function Hero() {
             <BlurIn delay={0.9} duration={0.6}>
               <div className="flex flex-col gap-5">
                 <div className="flex flex-wrap gap-4">
+                  <BookCallLink placement="hero" />
                   <Link
                     href="#work"
-                    className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-[#070612] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]"
-                  >
-                    See my work
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                  <Link
-                    href="/contact"
                     className="inline-flex items-center rounded-full border-2 border-accent bg-transparent px-8 py-3 font-medium text-accent transition-all duration-300 hover:bg-[rgba(0,229,255,0.1)]"
                   >
-                    Let&apos;s talk
+                    See my work
                   </Link>
                 </div>
                 <p className="flex items-start gap-2 text-sm text-muted">

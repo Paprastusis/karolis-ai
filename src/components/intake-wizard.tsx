@@ -12,6 +12,7 @@ import {
   Receipt,
   Sparkles,
 } from "lucide-react";
+import { trackEvent } from "@/lib/track";
 
 const PAINS = [
   { label: "Bookings and scheduling", icon: Calendar },
@@ -102,6 +103,7 @@ export function IntakeWizard({ intent }: { intent?: "blueprint" }) {
         throw new Error(body?.error ?? "Something went wrong.");
       }
       setStatus("success");
+      trackEvent("lead", { source: "wizard", intent: intent ?? "general" });
     } catch (err) {
       setErrorMessage(err instanceof Error ? err.message : "Something went wrong.");
       setStatus("error");

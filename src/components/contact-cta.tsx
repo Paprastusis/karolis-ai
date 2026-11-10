@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowRight, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { FadeInView } from "./animations/fade-in-view";
+import { BookCallLink } from "./book-call-link";
 
 export function ContactCTA() {
   return (
@@ -16,20 +16,14 @@ export function ContactCTA() {
 
         <FadeInView delay={0.1}>
           <p className="mt-6 max-w-xl text-lg text-body">
-            Whether you&apos;re hiring or want something built, book a quick call
+            Tell me what&apos;s eating your team&apos;s time. Book a quick call
             or email me.
           </p>
         </FadeInView>
 
         <FadeInView delay={0.2}>
           <div className="mt-8 flex flex-col items-center gap-5 sm:flex-row sm:gap-6">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-[#070612] transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(0,229,255,0.3)]"
-            >
-              Get in touch
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            <BookCallLink placement="home_closing" />
             <a
               href="mailto:karolistamas@gmail.com"
               className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors duration-300 hover:text-accent"
