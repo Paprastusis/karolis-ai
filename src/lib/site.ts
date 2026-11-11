@@ -3,8 +3,10 @@
 // data link must use the www form or search engines see two different sites.
 export const SITE_URL = "https://www.karolis.ai";
 
-// Public booking page (Google Calendar appointment schedule, Cal.com, or
-// Calendly). Set NEXT_PUBLIC_BOOKING_URL in Vercel to switch every "Let's talk"
-// button to "Book a free call". Until it is set, those buttons go to /contact.
-const rawBookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL ?? "";
+// Public booking page: a Google Calendar appointment schedule. Every main
+// button on the site opens it as "Book a free call". To change it without a
+// code change, set NEXT_PUBLIC_BOOKING_URL in Vercel; that value wins.
+const DEFAULT_BOOKING_URL = "https://calendar.app.google/mNA6nYbmnxgMzhq27";
+const rawBookingUrl =
+  process.env.NEXT_PUBLIC_BOOKING_URL || DEFAULT_BOOKING_URL;
 export const BOOKING_URL = /^https:\/\//.test(rawBookingUrl) ? rawBookingUrl : "";

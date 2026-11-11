@@ -18,7 +18,7 @@ Project content lives in `src/content/projects.ts` (single source of truth for t
 |---|---|
 | `RESEND_API_KEY` | Delivers contact-form and agent leads by email. |
 | `ANTHROPIC_API_KEY` | Turns on the intake agent. |
-| `NEXT_PUBLIC_BOOKING_URL` | Public booking page (Google Calendar, Cal.com, Calendly). Switches the main buttons from "Let's talk" to "Book a free call". |
+| `NEXT_PUBLIC_BOOKING_URL` | Optional. Overrides the booking page link set in `src/lib/site.ts`, which the "Book a free call" buttons open. |
 | `NEXT_PUBLIC_META_PIXEL_ID` | Numeric Meta Pixel ID. Loads the Pixel and reports page views, `Lead`, and `Schedule` events. |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Token from Google Search Console's "HTML tag" verification method. |
 
