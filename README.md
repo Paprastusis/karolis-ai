@@ -19,7 +19,7 @@ Project content lives in `src/content/projects.ts` (single source of truth for t
 | `RESEND_API_KEY` | Delivers contact-form and agent leads by email. |
 | `ANTHROPIC_API_KEY` | Turns on the intake agent. |
 | `NEXT_PUBLIC_BOOKING_URL` | Optional. Overrides the booking page link set in `src/lib/site.ts`, which the "Book a free call" buttons open. |
-| `NEXT_PUBLIC_META_PIXEL_ID` | Numeric Meta Pixel ID. Loads the Pixel and reports page views, `Lead`, and `Schedule` events. |
+| `NEXT_PUBLIC_META_PIXEL_ID` | Optional. Overrides the Meta Pixel ID set in `src/components/meta-pixel.tsx`. The Pixel reports page views, `Lead`, and `Schedule` events. |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Token from Google Search Console's "HTML tag" verification method. |
 
 The canonical domain is `https://www.karolis.ai` (see `src/lib/site.ts`); the apex redirects to it in Vercel.

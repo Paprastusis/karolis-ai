@@ -4,9 +4,11 @@ import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
 
-// Set NEXT_PUBLIC_META_PIXEL_ID in Vercel to turn the Pixel on. Without it
-// (or with anything that isn't a numeric ID) nothing is loaded.
-const rawPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "";
+// The "karolis.ai" dataset in Meta Events Manager. A Pixel ID is public (it
+// ships in the page source), so it lives here. To use a different one without
+// a code change, set NEXT_PUBLIC_META_PIXEL_ID in Vercel; that value wins.
+const DEFAULT_PIXEL_ID = "1131194053146500";
+const rawPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || DEFAULT_PIXEL_ID;
 const PIXEL_ID = /^\d+$/.test(rawPixelId) ? rawPixelId : "";
 
 export function MetaPixel() {
