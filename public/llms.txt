@@ -16,6 +16,7 @@
 ## Pages
 
 - [Home](https://www.karolis.ai/): overview and a live intake agent
+- [Yards](https://www.karolis.ai/yards): one system for truck parking, storage and RV yards (booking, e-sign leases, payments, QuickBooks sync, collections, gate codes), built by a Phoenix yard operator; remote across the US
 - [Work](https://www.karolis.ai/work): shipped projects, including Flux Sync (SaaS for storage-yard operators) and the software that runs Paddock Parking
 - [Services](https://www.karolis.ai/services): what he builds, the Blueprint offer, and common questions
 - [About](https://www.karolis.ai/about): background

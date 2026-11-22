@@ -1,16 +1,18 @@
-import { faq } from "@/content/faq";
+import { faq, type FaqItem } from "@/content/faq";
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faq.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: { "@type": "Answer", text: item.answer },
-  })),
-};
+// Renders the questions and publishes them as FAQPage structured data.
+// Defaults to the site-wide questions; pages can pass their own.
+export function Faq({ items = faq }: { items?: FaqItem[] }) {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
 
-export function Faq() {
   return (
     <section id="faq" className="w-full bg-[#070612] py-24 lg:py-32">
       <div className="mx-auto max-w-3xl px-6 lg:px-12">
@@ -19,7 +21,7 @@ export function Faq() {
         </h2>
 
         <div className="mt-10 flex flex-col gap-3">
-          {faq.map((item) => (
+          {items.map((item) => (
             <details
               key={item.question}
               className="group rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-5 transition-colors duration-300 open:border-accent/30"
