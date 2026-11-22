@@ -29,11 +29,15 @@ const playfair = Playfair_Display({
 // NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION in Vercel to verify the site.
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
+// Meta Business domain verification for karolis.ai (Brand safety → Domains).
+const META_DOMAIN_VERIFICATION = "4mbwr119dt5ue0zxd77e8t95n0fldv";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  ...(googleVerification
-    ? { verification: { google: googleVerification } }
-    : {}),
+  verification: {
+    ...(googleVerification ? { google: googleVerification } : {}),
+    other: { "facebook-domain-verification": META_DOMAIN_VERIFICATION },
+  },
   title: {
     default:
       "Karolis Tamosiunas — AI and automation systems for real businesses",
