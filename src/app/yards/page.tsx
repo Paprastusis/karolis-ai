@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ArrowDown,
+  ArrowRight,
   BellRing,
   Check,
   ChartColumn,
@@ -20,6 +22,7 @@ import { BookCallLink } from "@/components/book-call-link";
 import { Faq } from "@/components/faq";
 import { YardDashboard } from "@/components/yard-dashboard";
 import { FEATURES, LOCATION_LINE, PROBLEMS, STEPS, YARDS_FAQ } from "@/content/yards";
+import { YARD_PAGES } from "@/content/yard-pages";
 
 export const metadata: Metadata = {
   title: "Software for truck parking, storage and RV yards",
@@ -187,6 +190,33 @@ export default function YardsPage() {
               </FadeInView>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Pages for each kind of yard and each common problem */}
+      <section className="w-full bg-surface py-20 lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2 lg:px-12">
+          {([
+            ["By kind of yard", "type"],
+            ["By problem", "problem"],
+          ] as const).map(([heading, group]) => (
+            <div key={group}>
+              <h2 className="text-2xl font-medium text-white md:text-3xl">{heading}</h2>
+              <ul className="mt-6 flex flex-col gap-3">
+                {YARD_PAGES.filter((p) => p.group === group).map((p) => (
+                  <li key={p.slug}>
+                    <Link
+                      href={`/yards/${p.slug}`}
+                      className="flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-[#070612] px-5 py-4 text-white transition-colors hover:border-accent/40"
+                    >
+                      {p.label}
+                      <ArrowRight className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 
