@@ -25,9 +25,11 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
 });
 
-// Paste the Google Search Console "HTML tag" token into
-// NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION in Vercel to verify the site.
-const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+// Google Search Console "HTML tag" token for https://www.karolis.ai.
+// NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION in Vercel overrides it if set.
+const googleVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ||
+  "5x2U6cKKYJGLa4qdD0CGNBzAfGTzW0quEZEd6GLpuBw";
 
 // Meta Business domain verification for karolis.ai (Brand safety → Domains).
 const META_DOMAIN_VERIFICATION = "4mbwr119dt5ue0zxd77e8t95n0fldv";
