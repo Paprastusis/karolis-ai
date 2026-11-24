@@ -7,6 +7,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { MotionProvider } from "@/components/motion-provider";
 import { MetaPixel } from "@/components/meta-pixel";
+import { GoogleTag } from "@/components/google-tag";
 import { SITE_URL } from "@/lib/site";
 
 const geistSans = Geist({
@@ -140,6 +141,7 @@ export default function RootLayout({
         </MotionProvider>
         <Analytics />
         <MetaPixel />
+        <GoogleTag />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
