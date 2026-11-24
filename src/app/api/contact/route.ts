@@ -8,7 +8,7 @@ import { NextRequest, NextResponse } from "next/server";
 // the natural choice). Until the key is set, the form shows a friendly error
 // and the page still offers the email/phone fallbacks.
 const RESEND_ENDPOINT = "https://api.resend.com/emails";
-const TO_EMAIL = "karolistamas@gmail.com";
+const TO_EMAIL = "karolis@karolis.ai";
 const FROM_EMAIL = "karolis.ai contact <contact@karolis.ai>";
 
 // Basic in-memory rate limit. It resets on cold start, which is acceptable for

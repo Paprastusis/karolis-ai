@@ -188,8 +188,8 @@ export function AgentChat() {
               {sendState === "failed" && (
                 <p className="mt-2 text-sm text-red-400" role="alert">
                   That didn&apos;t go through. Email me directly at{" "}
-                  <a href="mailto:karolistamas@gmail.com" className="text-accent">
-                    karolistamas@gmail.com
+                  <a href="mailto:hello@karolis.ai" className="text-accent">
+                    hello@karolis.ai
                   </a>
                   .
                 </p>

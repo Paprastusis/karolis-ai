@@ -34,11 +34,11 @@ export function Footer() {
 
         <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3">
           <a
-            href="mailto:karolistamas@gmail.com"
+            href="mailto:hello@karolis.ai"
             className="flex items-center gap-2 text-sm text-muted transition-colors duration-300 hover:text-accent"
           >
             <Mail className="h-4 w-4" />
-            karolistamas@gmail.com
+            hello@karolis.ai
           </a>
           <a
             href="tel:+16027673078"

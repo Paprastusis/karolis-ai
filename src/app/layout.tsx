@@ -77,7 +77,7 @@ const siteJsonLd = {
       url: SITE_URL,
       image: `${SITE_URL}/karolis.jpg`,
       jobTitle: "Founder and Full-Stack Engineer",
-      email: "mailto:karolistamas@gmail.com",
+      email: "mailto:hello@karolis.ai",
       sameAs: [
         "https://www.linkedin.com/in/karolis-tamosiunas/",
         "https://github.com/Paprastusis",
@@ -92,7 +92,7 @@ const siteJsonLd = {
       description:
         "Custom software, AI agents, and automation for businesses that run on manual work: booking, invoicing, document handling, reporting, customer portals, and QuickBooks and Stripe integrations.",
       founder: { "@id": `${SITE_URL}/#karolis` },
-      email: "mailto:karolistamas@gmail.com",
+      email: "mailto:hello@karolis.ai",
       telephone: "+16027673078",
       address: {
         "@type": "PostalAddress",

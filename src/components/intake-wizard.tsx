@@ -284,8 +284,8 @@ export function IntakeWizard({ intent }: { intent?: "blueprint" }) {
           {status === "error" && (
             <p className="text-sm text-red-400" role="alert">
               {errorMessage} Please email me directly at{" "}
-              <a href="mailto:karolistamas@gmail.com" className="font-medium text-accent">
-                karolistamas@gmail.com
+              <a href="mailto:hello@karolis.ai" className="font-medium text-accent">
+                hello@karolis.ai
               </a>
               .
             </p>

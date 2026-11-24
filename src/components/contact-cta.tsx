@@ -25,11 +25,11 @@ export function ContactCTA() {
           <div className="mt-8 flex flex-col items-center gap-5 sm:flex-row sm:gap-6">
             <BookCallLink placement="home_closing" />
             <a
-              href="mailto:karolistamas@gmail.com"
+              href="mailto:hello@karolis.ai"
               className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors duration-300 hover:text-accent"
             >
               <Mail className="h-4 w-4" />
-              karolistamas@gmail.com
+              hello@karolis.ai
             </a>
           </div>
         </FadeInView>

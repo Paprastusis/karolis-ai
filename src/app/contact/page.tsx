@@ -70,11 +70,11 @@ export default function ContactPage() {
         <BlurIn delay={0.25}>
           <div className="mt-12 flex flex-col items-center justify-center gap-4 border-t border-white/[0.06] pt-8 text-center sm:flex-row sm:gap-8">
             <a
-              href="mailto:karolistamas@gmail.com"
+              href="mailto:hello@karolis.ai"
               className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors duration-300 hover:text-accent"
             >
               <Mail className="h-4 w-4" />
-              karolistamas@gmail.com
+              hello@karolis.ai
             </a>
             <span className="hidden text-white/15 sm:inline">|</span>
             <span className="inline-flex items-center gap-2 text-sm font-medium text-muted">
