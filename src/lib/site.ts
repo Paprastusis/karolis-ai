@@ -10,3 +10,7 @@ const DEFAULT_BOOKING_URL = "https://calendar.app.google/mNA6nYbmnxgMzhq27";
 const rawBookingUrl =
   process.env.NEXT_PUBLIC_BOOKING_URL || DEFAULT_BOOKING_URL;
 export const BOOKING_URL = /^https:\/\//.test(rawBookingUrl) ? rawBookingUrl : "";
+
+// Public phone (Google Voice). Shown on the site and used by the call buttons.
+export const PHONE_DISPLAY = "602-767-3078";
+export const PHONE_HREF = "tel:+16027673078";

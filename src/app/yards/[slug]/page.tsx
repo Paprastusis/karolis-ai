@@ -5,6 +5,7 @@ import { ArrowRight, Check, MapPin, X } from "lucide-react";
 import { BlurIn } from "@/components/animations/blur-in";
 import { FadeInView } from "@/components/animations/fade-in-view";
 import { BookCallLink } from "@/components/book-call-link";
+import { CallLink } from "@/components/call-link";
 import { Faq } from "@/components/faq";
 import { LOCATION_LINE } from "@/content/yards";
 import { YARD_PAGES, getYardPage } from "@/content/yard-pages";
@@ -62,7 +63,7 @@ export default async function YardTopicPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="w-full bg-[#070612] pt-32 pb-20 lg:pt-40 lg:pb-24">
+      <section className="w-full bg-[#070612] pt-10 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-24">
         <div className="mx-auto max-w-4xl px-6 lg:px-12">
           <BlurIn>
             <Link
@@ -73,17 +74,21 @@ export default async function YardTopicPage({ params }: Props) {
             </Link>
           </BlurIn>
           <BlurIn delay={0.1}>
-            <h1 className="mt-6 text-4xl font-medium leading-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
+            <h1 className="mt-4 text-4xl sm:mt-6 font-medium leading-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
               {page.title}{" "}
               <span className="font-serif italic text-accent">{page.titleAccent}</span>
             </h1>
           </BlurIn>
           <BlurIn delay={0.2}>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-body">{page.intro}</p>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-body sm:mt-6 sm:text-lg">{page.intro}</p>
           </BlurIn>
           <BlurIn delay={0.3}>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-8 sm:gap-4">
               <BookCallLink placement={`yards_${page.slug}`} />
+              {/* Phones get the call button in the bottom bar instead. */}
+              <span className="hidden sm:inline-flex">
+                <CallLink placement={`yards_${page.slug}`} />
+              </span>
             </div>
             <Location className="mt-6" />
           </BlurIn>

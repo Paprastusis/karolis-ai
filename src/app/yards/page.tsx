@@ -19,6 +19,7 @@ import {
 import { BlurIn } from "@/components/animations/blur-in";
 import { FadeInView } from "@/components/animations/fade-in-view";
 import { BookCallLink } from "@/components/book-call-link";
+import { CallLink } from "@/components/call-link";
 import { Faq } from "@/components/faq";
 import { YardDashboard } from "@/components/yard-dashboard";
 import { FEATURES, LOCATION_LINE, PROBLEMS, STEPS, YARDS_FAQ } from "@/content/yards";
@@ -52,7 +53,7 @@ export default function YardsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="w-full bg-[#070612] pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <section className="w-full bg-[#070612] pt-10 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-28">
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-[1.1fr_1fr] lg:px-12">
           <div>
             <BlurIn>
@@ -61,21 +62,25 @@ export default function YardsPage() {
               </p>
             </BlurIn>
             <BlurIn delay={0.1}>
-              <h1 className="mt-6 text-4xl font-medium leading-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
+              <h1 className="mt-4 text-4xl sm:mt-6 font-medium leading-tight text-white md:text-5xl lg:text-6xl lg:leading-[1.1]">
                 Run your yard from{" "}
                 <span className="font-serif italic text-accent">one system.</span>
               </h1>
             </BlurIn>
             <BlurIn delay={0.2}>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-body">
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-body sm:mt-6 sm:text-lg">
                 Booking, leases, payments, collections and gate codes in one
                 place, built around how your yard already works. My own yards
                 run on it every day.
               </p>
             </BlurIn>
             <BlurIn delay={0.3}>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-8 sm:gap-4">
                 <BookCallLink placement="yards_hero" />
+                {/* Phones get the call button in the bottom bar instead. */}
+                <span className="hidden sm:inline-flex">
+                  <CallLink placement="yards_hero" />
+                </span>
                 <a
                   href="#how"
                   className="inline-flex items-center gap-2 rounded-full px-2 py-3 font-medium text-white/80 transition-colors duration-300 hover:text-white"

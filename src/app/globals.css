@@ -34,3 +34,10 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
+
+/* Room for the fixed call/book bar that yard pages show on phones. */
+@media (max-width: 767px) {
+  body:has([data-mobile-cta]) {
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom));
+  }
+}

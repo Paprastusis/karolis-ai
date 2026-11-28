@@ -11,12 +11,13 @@ declare global {
   }
 }
 
-type EventName = "lead" | "book_call_click";
+type EventName = "lead" | "book_call_click" | "call_click";
 
 // Meta's standard event names, so ad campaigns can optimise for them.
 const META_EVENT: Record<EventName, string> = {
   lead: "Lead",
   book_call_click: "Schedule",
+  call_click: "Contact",
 };
 
 // Google Ads conversion actions, by event. Events without one aren't sent.
